@@ -27,7 +27,7 @@ const PanelCartMobile = ({ ecomerce }) => {
         const items = products.map((item) => (
             <div className="ps-product--cart-mobile" key={item.id}>
                 <div className="ps-product__thumbnail">
-                    <Link href={`/product/${item.id}`}>
+                    <Link href="/product/[pid]" as={`/product/${item.id}`}>
                         <a>{thumbnailImage(item)}</a>
                     </Link>
                 </div>
@@ -38,7 +38,7 @@ const PanelCartMobile = ({ ecomerce }) => {
                         <i className="icon-cross"></i>
                     </a>
                     {title(item)}
-                    <Link href={`/product/${item.id}`}>
+                    <Link href="/product/[pid]" as={`/product/${item.id}`}>
                         <a className="ps-product__title">{item.title}</a>
                     </Link>
                     <p>

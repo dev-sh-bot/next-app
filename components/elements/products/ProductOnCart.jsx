@@ -7,7 +7,7 @@ const ProductOnCart = ({ product, children }) => {
     return (
         <div className="ps-product--cart-mobile">
             <div className="ps-product__thumbnail">
-                <Link href={`/product/${product.id}`}>
+                <Link href="/product/[pid]" as={`/product/${product.id}`}>
                     <a>{thumbnailImage(product)}</a>
                 </Link>
             </div>

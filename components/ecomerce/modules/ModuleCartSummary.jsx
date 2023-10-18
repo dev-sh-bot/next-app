@@ -10,7 +10,7 @@ const ModuleCartSummary = ({ source }) => {
         productItemsView = source.map((item) => (
             <li key={item.id}>
                 <span className="ps-block__estimate">
-                    <Link href={`/product/${item.id}`}>
+                    <Link href="/product/[pid]" as={`/product/${item.id}`}>
                         <a className="ps-product__title">
                             {item.title}
                             <br /> x {item.quantity}

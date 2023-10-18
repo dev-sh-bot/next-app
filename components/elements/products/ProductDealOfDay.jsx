@@ -12,7 +12,7 @@ const ProductDealOfDay = ({ product }) => {
     return (
         <div className="ps-product ps-product--inner">
             <div className="ps-product__thumbnail">
-                <Link href="/product/[pid]" as={`/product/${product.id}`}>
+                <Link href={`/product/${product.id}`}>
                     <a>{thumbnailImage(product)}</a>
                 </Link>
                 {badge(product)}

@@ -11,7 +11,7 @@ const ProductWide = ({ product, collectionSlug, userRole }) => {
         userRole?.role?.name !== "retailer" && collectionSlug == "wholesaler" ?
             <div className="ps-product ps-product--wide" onClick={() => notificationAlert("info", "Opps!", "You need to signin with retailer account")}>
                 <div className="ps-product__thumbnail">
-                    {/* <Link href="/product/[pid]" as={`/product/${product.id}`}> */}
+                    {/* <Link href={`/product/${product.id}`}> */}
                     <a>{thumbnailImage(product)}</a>
                     {/* </Link> */}
                 </div>
@@ -36,7 +36,7 @@ const ProductWide = ({ product, collectionSlug, userRole }) => {
 
             <div className="ps-product ps-product--wide">
                 <div className="ps-product__thumbnail">
-                    <Link href="/product/[pid]" as={`/product/${product.id}`}>
+                    <Link href={`/product/${product.id}`}>
                         <a>{thumbnailImage(product)}</a>
                     </Link>
                 </div>
